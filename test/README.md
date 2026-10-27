@@ -39,7 +39,7 @@ One discovery feature visits many screens; feature count is not unique-screen co
 ## Client tests: the browser smoke and the Find screens
 
 `test/client/` holds the client specs, which run outside the server against one that is running, in headless Chromium
-(plans/ClientTestHarness.md in the MR-Moqui repository). No npm, Node or Python is needed. `--serve` starts the server
+(docs/Client-Testing.md in the MR-Moqui repository). No npm, Node or Python is needed. `--serve` starts the server
 `test/client/suite.js` declares, runs the specs against it and stops it:
 
 ```sh

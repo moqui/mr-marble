@@ -1,4 +1,4 @@
-// Port of the Playwright random-screen.spec.mjs (plans/ClientTestHarness.md 9): each Find screen with a list and its
+// Port of the Playwright random-screen.spec.mjs (plans/archive/ClientTestHarness.md 9): each Find screen with a list and its
 // Find Options dialog (a form-list with header-dialog="true") and no required parameter renders for john.doe in
 // headless Chromium and fits the desktop viewport. The old test sampled one edited screen from git diff at random;
 // here every candidate is a where row, so a failure repeats, and --param screen=Survey/FindSurvey runs one. Find
