@@ -3,9 +3,6 @@
 [![license](http://img.shields.io/badge/license-CC0%201.0%20Universal-blue.svg)](https://github.com/moqui/mr-marble/blob/master/LICENSE.md)
 
 [![Discourse Forum](https://img.shields.io/badge/moqui%20forum-discourse-blue.svg)](https://forum.moqui.org)
-[![Google Group](https://img.shields.io/badge/google%20group-moqui-blue.svg)](https://groups.google.com/d/forum/moqui)
-[![LinkedIn Group](https://img.shields.io/badge/linked%20in%20group-moqui-blue.svg)](https://www.linkedin.com/groups/4640689)
-[![Stack Overflow](https://img.shields.io/badge/stack%20overflow-moqui-blue.svg)](http://stackoverflow.com/questions/tagged/moqui)
 
 The Marble ERP application and the Simple Screens library it is built from, for
 [MR Moqui](https://github.com/moqui/mr-moqui), in one component named `mr-marble` that depends on `mr-mantle`:
@@ -33,11 +30,7 @@ To make sure this component loads before yours, add a dependency in your compone
 ./moq test mr-mantle mr-marble
 ```
 
-Moqui Marble ERP is a comprehensive ERP application rather than being focused on goods like POP Commerce ERP or
-services like HiveMind PM & Admin. Part of the reason for the combination is that goods oriented businesses also have
-projects and tasks to manage even if they don't sell them, and services oriented businesses also have equipment and
-supplies to manage even if they don't sell goods.
-
-It is designed around business activities in 3 categories by the primary roles in the system: Internal, Supplier, and
+Marble ERP covers both goods and services, since goods businesses also manage projects and tasks, and services
+businesses also manage equipment and supplies. It is designed around business activities in 3 categories by the primary roles in the system: Internal, Supplier, and
 Customer. These activities fit into high level business processes such as Procure to Pay (Supplier interactions) and
 Order to Cash (Customer interactions), and are combined to support a complete end to end flow.
