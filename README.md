@@ -18,7 +18,7 @@ The Marble ERP application and the Simple Screens library it is built from, for
 
 The two were ported in the forks `MrSimpleScreens` and `MrMarbleERP` (Groovy and FreeMarker to JavaScript, XSL-FO to
 HTML print), then merged into this repository with the commit history of both. The renames from the Java names are in
-the MR Moqui `docs/Moqui-Java-Migration.md`; the port is recorded in [MIGRATION-STATUS.md](MIGRATION-STATUS.md), and
+the MR Moqui `docs/dev/Moqui-Java-Migration.md`; the port is recorded in [MIGRATION-STATUS.md](MIGRATION-STATUS.md), and
 the test commands are in [test/README.md](test/README.md). Java FOP is not required.
 
 To make sure this component loads before yours, add a dependency in your component's component.xml file:
