@@ -64,8 +64,7 @@ existing`) and pass `--server <url>`; `--param user=` and `--param password=` ov
   Retail, then clear it); PrintOrder 55400 with its SVG barcode and a PDF. It changes the demo user's active
   organization, so use disposable data.
 - `FindScreens`: a row for every `Find*.xml` with a list, Find Options and no required parameter (or the one
-  `--param screen=` names), checking the page, the list, overflow, and saving a screenshot. It is a layout smoke, not a
-  check of rows.
+  `--param screen=` names), checking the page, the list and overflow. It is a layout smoke, not a check of rows.
 
 Every row fails on page problems (uncaught exceptions, console errors, HTTP 400 and up, render errors), leaving
 `failed-<feature>-<n>.png` and `.txt`. Output goes to `runtime/tmp/test-client/<time>-<pid>/` or `--out <dir>`. With no

@@ -4,8 +4,8 @@
 // here every candidate is a where row, so a failure repeats, and --param screen=Survey/FindSurvey runs one. Find
 // screens exercise real forms without record-specific fixtures; their lists may be empty under the default filters,
 // so this is a layout and framework smoke, not a check of rows. Page problems (uncaught exceptions, console errors,
-// responses of 400 and up, render errors, error notifications) fail each row. A screenshot of each goes to the output
-// directory, and a failure leaves its own.
+// responses of 400 and up, render errors, error notifications) fail each row, and a failure leaves a screenshot in the
+// output directory.
 // Run: moqui test-client mr-marble --serve --spec FindScreens [--param screen=Order/FindOrder]
 const user = params.user ?? "john.doe"
 const password = params.password ?? "moqui"
@@ -48,7 +48,6 @@ feature("#screen renders its list and Find Options and fits the viewport", {
         table.waitFor()
         table.locator("th").first().waitFor()
         page.getByRole("button", { name: /Find Options/ }).first().waitFor()
-        page.screenshot(`FindScreens-${screen.replace(/\//g, "-")}`, { fullPage: true })
         // a broken desktop layout, without asking for pixel-identical output
         page.evaluate(() => document.documentElement.scrollWidth - innerWidth) <= 2
         table.evaluate((el) => el.getBoundingClientRect().width) > 300
@@ -72,7 +71,6 @@ feature("Survey: New Survey opens and closes, and Find Options' Find submits", {
         const bounds = dialog.boundingBox()
         bounds.x >= 0
         bounds.x + bounds.width <= 1440
-        page.screenshot("FindScreens-Survey-NewSurvey", { fullPage: true })
         page.keyboard.press("Escape")
         dialog.waitFor({ state: "hidden" })
         page.getByRole("button", { name: /Find Options/ }).first().click()

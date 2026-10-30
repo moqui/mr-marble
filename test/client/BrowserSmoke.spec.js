@@ -1,7 +1,7 @@
 // Pages of the flow data as john.doe in headless Chromium, each with the text it must show, PrintOrder with its SVG
 // barcode bars and a PDF, and the organization menu (select Ziziwork Retail, then clear it). Page problems (uncaught
-// exceptions, console errors, failed responses, render errors) fail each row. The PDF and screenshots go to the
-// output directory; reading the PDF's text (pdftotext) was a manual step and is not ported.
+// exceptions, console errors, failed responses, render errors) fail each row. The PDF goes to the output
+// directory; reading the PDF's text (pdftotext) was a manual step and is not ported.
 // Run: moqui test-client mr-marble --serve --spec BrowserSmoke
 const user = params.user ?? "john.doe"
 const password = params.password ?? "moqui"
@@ -46,7 +46,6 @@ feature("the organization menu selects and clears Ziziwork Retail", {
             const clear = document.querySelector('#active-org-menu a[href$="preferenceValue="]')
             return summary && summary.innerText.includes("Organization") && !clear
         })
-        page.screenshot("marble-dashboard", { fullPage: true })
     },
 })
 
@@ -60,6 +59,5 @@ feature("PrintOrder renders barcodes and prints a PDF", {
         const pdf = page.pdf("PrintOrder-55400")
         pdf.magic == "%PDF"
         pdf.size > 1000
-        page.screenshot("PrintOrder-55400", { fullPage: true })
     },
 })
